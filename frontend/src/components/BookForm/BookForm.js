@@ -30,7 +30,7 @@ const BookForm = () => {
   };
 
   const handleAddRandomBookViaAPI = () => {
-    dispatch(fetchBook());
+    dispatch(fetchBook("http://localhost:5000/random-book"));
   };
 
   return (
@@ -59,7 +59,7 @@ const BookForm = () => {
         <button type="button" onClick={handleAddRandomBook}>
           Add Random
         </button>
-        <button type="bytton" onClick={handleAddRandomBookViaAPI}>
+        <button type="button" onClick={handleAddRandomBookViaAPI}>
           Add Random via API
         </button>
       </form>
